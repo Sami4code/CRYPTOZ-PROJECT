@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto-Z Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nohemi&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yukita+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--Nav Bar-->
+    <nav id="navbar" class="nav_bar">
+        <div class="logo">
+            <div>
+                <img class="nexo" src="Assets/nexo-(nexo).png" alt="nexo logo">
+            </div>
+            <a class="crypto_z" href=""><strong>Crypto<span style="color:#0000FF";>Z</span></strong></a>
+        </div>
+            <ul class="nav-tabs" id="linkTabs">
+                <li><a class="menu-button" href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Price</a></li>
+                <li><a href="#">Learn</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        <div class="nav-buttons">
+            <a class="auth-buttons1" href="#">Sign in</a>
+            <a class="auth-buttons2" href="#">Get Started</a>
+        </div>
+        <button id="hamburger-toggle" class="hamburger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+          </svg></button>
+        <!-- <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div> -->
+    </nav>
+
+    <!--The Hero Section-->
+    <section>
+        <main class="hero-container">
+        <div class="hero-left-div">
+            <h2>Your all-in-one platform <br>to buy, sell, trade, and <br>earn Cryptocurrencies</h2>
+            <p>Open a free account in minutes right from your phone and make your money go further</p>
+            <div>
+                <input class="input1" type="text" id="emailAddress" placeholder="Email Address...">
+                <a class="get-started" href="#">Get Started</a>
+            </div>
+        </div>
+
+        <img class="btc_icon" src="Assets/Cam2.png" alt="Btc-icon">
+        <img class="Ethereum_icon" src="Assets/Cam1.png" alt="Ethereum-icon">   
+
+        <div class="hero-right-div">
+            <h3>Currency Converter</h3>
+            <div class="amount-div">
+                <p class="amount">Amount</p>
+                <div class="flag-digit_container">
+                    <div class="flag">
+                        <img src="Assets/Frame 8764.png" alt="flag">
+                        <!-- <p>GBP</p> -->
+                        <select id="first-currency">
+                            <option value="GBP" selected>GBP</option>
+                            <option value="JPY">JPY</option>
+                            <option value="CNY">CNY</option>
+                            <option value="NZD">NZD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CHF">CHF</option>
+                            <option value="USD">USD</option>
+                            <input type="number" id="first-worth" value="0.0088" min="0">
+                        </select>
+                    </div>
+                </div>
+
+                <div class="amount-div">
+                    <p class="converted">Converted to</p>
+                    <div class="flag-digit_container">
+                        <div class="flag">
+                            <img class="asset-frame" src="Assets/Frame 8769.png" alt="flag">
+                            <!-- <p>AUD</p> -->
+                            <select id="second-currency">
+                                <option value="AUD" selected>AUD</option>
+                                <option value="JPY">JPY</option>
+                                <option value="CNY">CNY</option>
+                                <option value="NZD">NZD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="CAD">CAD</option>
+                                <option value="CHF">CHF</option>
+                                <option value="USD">USD</option>
+                                <option value="CNY">CNY</option>
+                                <option value="JPY">JPY</option>
+                                <option value="RUB">RUB</option>
+                                <option value="HKD">HKD</option>
+                                <option value="NGN">NGN</option>
+                                <option value="INR">INR</option>
+                                <input type="number" id="second-worth" value="0.0088" min="0">
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="date-div">
+                        <p class="converted">Date</p>
+                        <div class="flag-digit_container">
+                            <div class="date">
+                                <div class="date-container">
+                                    <button id="decrease-date">&lt;</button>
+                                    <input type="date" id="date-input">
+                                    <button id="increase-date">&gt;</button>
+                                </div>
+                            </div>
+                        </div>
+                         <p class="euro-gbp">EUR GBP BTC</p>
+                    </div>  
+            </div>
+            <div class="exchange-output">
+                <p class="exchange-rate" id="exchange-rate">1 GBP = 1.92 AUD</p>
+            </div>
+        </div> 
+    </main>
+    </section>
+
+    <!--Coin Icons-->
+    <div class="Coin-logos">
+        <div class="coins">
+            <a href="#"><img class="binance" src="Assets/binance-logo.png" alt="binance logo "></a>
+            <a href=""><img class="coinbase" src="Assets/Coinbase logo.png" alt="binance logo "></a> 
+            <a href="#"> <img class="bitcoin" src="Assets/Bitcoin logo.png" alt="binance logo "></a>
+            <a href="#"><img class="tether" src="Assets/Tether logo.png" alt="binance logo "></a>  
+            <a href="#"><img class="bitmex" src="Assets/Bitmex logo.png" alt="binance logo "></a> 
+        </div>
+    </div>
+
+    <!--Our users section-->
+    <section>
+        <div class="our-users">
+            <div class="numbers1">
+                <div class="inner-div1">
+                    <h2>99k</h2>
+                    <p>People have joined</p>
+                </div>
+                
+            </div>
+            <div class="numbers2">
+                <h2>50k</h2>
+                <p>VVIP users have joined</p>
+            </div>
+
+            <div class="numbers3">
+                <div class="inner-div2">
+                    <h2>100+</h2>
+                    <p>Big Companies have joined</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Most Trusted Cryptocurrency Section-->
+    <section>
+        <div class="trusted-crypto-currency">
+            <div class="left-trusted-crypto-currency">
+                <h2>The Most Trusted Cryptocurrency <br>Platform</h2>
+                <div class="border-bottom">
+                    <div class="sync-between-platforms">
+                        <h3 class="serial-number">01</h3>
+                        <div>
+                            <h3>Sync between platforms</h3>
+                            <p>No matter if you're using our web interface or <br>mobile app — your data is always synced. Just one account for all our services.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-bottom">
+                    <div class="sync-between-platforms">
+                        <h3 class="serial-number">02</h3>
+                        <div>
+                            <h3>More focus, less clutter</h3>
+                            <p>No ads, just the crypto and content you love.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sync-between-platforms">
+                    <h3 class="serial-number">03</h3>
+                    <div>
+                        <h3>Security by default</h3>
+                        <p>Enable privacy mode and app locking to <br>protect your data.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-trusted-crypto-currency">
+    
+                    <div class="left-column">
+                        <div class="phone-image1">
+                            <img src="Assets/iphone-12--bk@2x.png" alt="">
+                            <img src="Assets/iphone-12--bc.png" alt="">
+                        </div>
+                    </div> 
+    
+                    <div class="right-column">
+                        <div class="phone-image2">
+                            <img src="Assets/iphone-12--black.png" alt="">
+                            <img src="Assets/iphone-12--b.png" alt="">
+                            <img src="Assets/iphone-12--bl@2x.png" alt="">
+                        </div>
+                    </div> 
+            </div> 
+        </div>
+    </section>
+
+    <!--Lightning-Fast Crypto Trading Section-->
+    <section>
+        <div class="fast-crypto-trading-container">
+            <div class="fast-crypto-image_cont">
+                <div class="fast-crypto-left-div">
+                    <div class="fast-crypto-top-left-div">
+                        <img class="top-left-div-first-image" src="Assets/iphone-12--bc@2x.png" alt="">
+                        <img class="top-left-div-second-image" src="Assets/Group 8751.png" alt="">
+                    </div>
+                    <div class="fast-crypto-bottom-left-div">
+                        <h3>Create portfolio <br>today</h3>
+                        <p>Buy and sell popular digital currencies, keep track of them <br>in the one place. Has a variety of features that make it the <br>best place to start trading</p>
+                    </div>
+                </div>
+
+                <div class="fast-crypto-right-div-container">
+                    <div class="fast-crypto-top-right-div">
+                        <div class="fast-crypto-top-right-div-left">
+                            <img class="top-right-div-first-image" src="Assets/iphone-12--black.png" alt="">
+                            <img class="top-right-div-second-image" src="Assets/Group 8750.png" alt="">
+                        </div>
+
+                        <div class="fast-crypto-top-right-div-right">
+                            <h3>Lightning-Fast <br>Crypto Trading</h3>
+                            <p>The Exchange supports USD, EUR, and GBP. Invest in cryptocurrency slowly over time by scheduling buys daily, weekly, or monthly.</p>
+                        </div>
+                    </div>
+
+                    <div class="fast-crypto-bottom-right-div">
+                        <div class="fast-crypto-bottom-right-div-left">
+                            <img class="fast-crypto-bottom-right-div-left-first-image" src="Assets/iphone-12--black.png" alt="">
+                            <img  class="fast-crypto-bottm-right-div-left-second-image" src="Assets/Group 5348.png" alt="">
+                        </div>
+                        <div class="fast-crypto-bottom-right-div-right">
+                            <h3>Security From <br>Day One</h3>
+                            <p>Safety, security and compliance. Buy and sell <br>popular digital currencies, keep track of them in one place.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Get Started in Just Few Minute-->
+        <div class="get-started-container">
+            <h1>Get Started in Just <br>Few Minute</h1>
+            <p>Has a variety of features that make it the best place to start trading</p>
+            <div class="get-started-container-image-container">
+                <div class="cart">
+                    <div class="cart-div">
+                        <img src="Assets/Frame 219.png" alt="">
+                        <h3>Sign Up</h3>
+                        <p>Buy Bitcoin or Ethereum, the securely store <br>it in your wallet or send it on easily to <br>friends </p>
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="cart-div">
+                        <img src="Assets/Frame 220.png" alt="">
+                        <h3>Fund</h3>
+                        <p>Choose you preferred payment method <br>such as bank transfer or credit card to top <br>up your wallet</p>
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="cart-div">
+                        <img src="Assets/Frame 221.png" alt="">
+                        <h3>Buy Crypto</h3>
+                        <p>Sign up for free wallet on web, IOS or <br>Android and follow our easy process to set <br>up your profile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--What People Are saying-->
+    <section>
+         <h1 class="people-saying">What people are saying</h1>
+         <div class="what-people-are-saying-container">
+            <div class="avater-first-column-container">
+                <div class="avater-first-column-div1">
+                   <div class="align">
+                    <div class="flex-display">
+                        <div>
+                            <img src="AVATERS/AVATER1.jpg" alt="">
+                        </div>
+                        <div>
+                            <h3>John Doe</h3>
+                            <p class="designation">CEO Motion Design Agency</p>
+                        </div>
+                    </div>
+                    <div class="lorem-div">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas inventore, enim odit eos quia consequatur recusandae repellendus facilis possimus perferendis culpa commodi nihil accusamus hic asperiores pariatur quae fuga quis consequuntur omnis incidunt odio. Laboriosam, natus! Possimus, perferendis ut quo quibusdam neque facilis distinctio qui libero illo ab facere!</p>
+                    </div>
+                   </div>
+                </div>
+
+                <div class="avater-first-column-div2-3">
+                    <div class="align">
+                        <div class="flex-display">
+                            <div>
+                                <img src="AVATERS/AVATER6.jpeg" aria-label="">
+                            </div>
+                            <div>
+                                <h3>John Doe</h3>
+                                <p class="designation">CEO Motion Design Agency</p>
+                            </div>
+                        </div>
+                        <div class="lorem-div">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas inventore, enim odit eos quia consequatur recusandae repellendus facilis possimus perferendis culpa commodi facere!</p>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="avater-first-column-div2-3">
+                    <div class="align">
+                        <div class="flex-display">
+                            <div>
+                                <img src="AVATERS/AVATER3.jpg" aria-label="">
+                            </div>
+                            <div>
+                                <h3>John Doe</h3>
+                                <p class="designation">CEO Motion Design Agency</p>
+                            </div>
+                        </div>
+                        <div class="lorem-div">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas inventore, enim odit eos quia consequatur recusandae repellendus facilis possimus perferendisfacere!</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!--Avater Second Column Container-->
+            <div class="avater-second-column-container">
+                <div class="avater-second-column-div">
+                    <div class="align">
+                     <div class="flex-display">
+                         <div>
+                             <img src="AVATERS/AVATER1.jpg" alt="">
+                         </div>
+                         <div>
+                             <h3>John Doe</h3>
+                             <p class="designation">CEO Motion Design Agency</p>
+                         </div>
+                     </div>
+                     <div class="lorem-div">
+                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas inventore, enim odit eos quia consequatur recusandae repellendus facilis possimus perferendis culpa commodi nihil accusamus</p>
+                     </div>
+                    </div>
+                 </div>
+ 
+                 <div class="avater-second-column-div">
+                     <div class="align">
+                         <div class="flex-display">
+                             <div>
+                                 <img src="AVATERS/AVATER6.jpeg" aria-label="">
+                             </div>
+                             <div>
+                                 <h3>John Doe</h3>
+                                 <p class="designation">CEO Motion Design Agency</p>
+                             </div>
+                         </div>
+                         <div class="lorem-div">
+                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas inventore, enim odit eos quia consequatur recusandae repellendus facilis possimus perferendis culpa commodi facere!</p>
+                         </div>
+                     </div>
+                 </div>
+                     
+                 <div class="avater-second-column-div">
+                     <div class="align">
+                         <div class="flex-display">
+                             <div>
+                                 <img src="AVATERS/AVATER3.jpg" aria-label="">
+                             </div>
+                             <div>
+                                 <h3>John Doe</h3>
+                                 <p class="designation">CEO Motion Design Agency</p>
+                             </div>
+                         </div>
+                         <div class="lorem-div">
+                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas inventore, enim odit eos quia consequatur recusandae repellendus facilis possimus perferendisfacere!</p>
+                         </div>
+                     </div>
+                     
+                 </div>
+            </div>
+            <!--Avater Third Column Container-->
+            <div class="avater-third-column-container">
+                <div class="avater-third-column-div1">
+                    <div class="align">
+                     <div class="flex-display">
+                         <div>
+                             <img src="AVATERS/AVATER1.jpg" alt="">
+                         </div>
+                         <div>
+                             <h3>John Doe</h3>
+                             <p class="designation">CEO Motion Design Agency</p>
+                         </div>
+                     </div>
+                     <div class="lorem-div">
+                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas inventore, enim odit eos quia consequatur recusandae repellendus facilis possimus perferendis culpa commodi nihil accusamus hic asperiores pariatur quae fuga quis consequuntur omnis incidunt odio. Laboriosam, natus! Possimus, perferendis ut quo quibusdam neque facilis distinctio qui libero illo ab facere!</p>
+                     </div>
+                    </div>
+                 </div>
+ 
+                 <div class="avater-third-column-div2">
+                     <div class="align">
+                         <div class="flex-display">
+                             <div>
+                                 <img src="AVATERS/AVATER6.jpeg" aria-label="">
+                             </div>
+                             <div>
+                                 <h3>John Doe</h3>
+                                 <p class="designation">CEO Motion Design Agency</p>
+                             </div>
+                         </div>
+                         <div class="lorem-div">
+                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas inventore, enim odit eos quia consequatur recusandae repellendus facilis possimus perferendis culpa commodi facere!</p>
+                         </div>
+                     </div>
+                 </div>
+                     
+                 <div class="avater-third-column-div3">
+                     <div class="align">
+                         <div class="flex-display">
+                             <div>
+                                 <img src="AVATERS/AVATER3.jpg" aria-label="">
+                             </div>
+                             <div>
+                                 <h3>John Doe</h3>
+                                 <p class="designation">CEO Motion Design Agency</p>
+                             </div>
+                         </div>
+                         <div class="lorem-div">
+                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas inventore, enim odit eos quia consequatur recusandae repellendus facilis possimus perferendisfacere!</p>
+                         </div>
+                     </div>
+                     
+                 </div>
+            </div>
+            <!--Avater Fourth Column Container-->
+            <div class="avater-fourth-column-container">
+                <div class="avater-fourth-column-div">
+                    <div class="align">
+                     <div class="flex-display">
+                         <div>
+                             <img src="AVATERS/AVATER1.jpg" alt="">
+                         </div>
+                         <div>
+                             <h3>John Doe</h3>
+                             <p class="designation">CEO Motion Design Agency</p>
+                         </div>
+                     </div>
+                     <div class="lorem-div">
+                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas inventore, enim odit eos quia consequatur recusandae repellendus facilis possimus perferendis culpa commodi nihil accusamus</p>
+                     </div>
+                    </div>
+                 </div>
+ 
+                 <div class="avater-fourth-column-div">
+                     <div class="align">
+                         <div class="flex-display">
+                             <div>
+                                 <img src="AVATERS/AVATER6.jpeg" aria-label="">
+                             </div>
+                             <div>
+                                 <h3>John Doe</h3>
+                                 <p class="designation">CEO Motion Design Agency</p>
+                             </div>
+                         </div>
+                         <div class="lorem-div">
+                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas inventore, enim odit eos quia consequatur recusandae repellendus facilis possimus perferendis culpa commodi facere!</p>
+                         </div>
+                     </div>
+                 </div>
+                     
+                 <div class="avater-fourth-column-div">
+                     <div class="align">
+                         <div class="flex-display">
+                             <div>
+                                 <img src="AVATERS/AVATER3.jpg" aria-label="">
+                             </div>
+                             <div>
+                                 <h3>John Doe</h3>
+                                 <p class="designation">CEO Motion Design Agency</p>
+                             </div>
+                         </div>
+                         <div class="lorem-div">
+                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas inventore, enim odit eos quia consequatur recusandae repellendus facilis possimus perferendisfacere!</p>
+                         </div>
+                     </div>
+                     
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Take your first step into safe, secure crypto investing-->
+    <section>
+        <div class="secure-crypto-investing-container">
+            <div class="secure-crypto-investing-div">
+                <div>
+                    <h3>Take your first step into safe, <br>secure crypto investing</h3>
+                    <a href=""><button><strong>Get started</strong></button></a>
+                    <img class="btc" src="Assets/btc.png" alt="">
+                    <img class="eth" src="Assets/eth.png" alt="">
+                    <img class="luna" src="Assets/luna.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <section>
+            <div class="footer-container">
+                <div class="footer-list-container">
+                    <div class="footer-list-container-div">
+                        <h3>Company</h3>
+                        <a href=""><li>About Us</li></a> 
+                        <a href=""><li>Blog</li></a>
+                        <a href=""><li>Careers</li></a> 
+                        <a href=""><li>Student</li></a> 
+                        <a href=""><li>Security</li></a> 
+                        <a href=""><li>Trust and Safety</li></a> 
+                        <a href=""><li>Newsroom</li></a> 
+                        <a href=""><li>Videos</li></a> 
+                    </div>
+                    <div class="footer-list-container-div">
+                        <h3>Learn</h3>
+                        <a href=""><li>What's Trending</li></a> 
+                        <a href=""><li>Product News</li></a> 
+                        <a href=""><li>Events</li></a> 
+                        <a href=""><li>University</li></a> 
+                        <a href=""><li>Research</li></a> 
+                        <a href=""> <li>Market Updates</li></a>
+                    </div>
+                    <div  class="footer-list-container-div">
+                        <h3>Products</h3>
+                        <a href=""><li>Stock & Fund</li></a> 
+                        <a href=""><li>Cash Card</li></a> 
+                        <a href=""><li>Crypto</li></a> 
+                        <a href=""><li>Option</li></a> 
+                        <a href=""><li>Gold</li></a> 
+                        <a href=""> <li>Learn Snacks</li></a>
+                    </div>
+                    <div  class="footer-list-container-div">
+                        <h3>Support</h3>
+                        <a href=""><li>Support Center</li></a> 
+                        <a href=""><li>Contact Us</li></a> 
+                        <a href=""><li>System Status</li></a> 
+                        <a href=""><li>Areas of Availability</li></a> 
+                        <a href=""><li>Gold</li></a> 
+                    </div>
+                    <div  class="footer-list-container-div">
+                        <h3>Resources</h3>
+                        <a href=""><li>Prices</li></a> 
+                        <a href=""><li>Site Widgets</li></a> 
+                        <a href=""><li>Tax</li></a> 
+                        <a href=""><li>Support</li></a>
+                    </div>
+                </div>
+                <div class="footer-down-part">
+                    <h2>Did you know you can do more with crypto while on the go?</h2>
+                    <div class="nexo-crypto">
+                        <img src="Assets/nexo-(nexo).png" alt="">
+                        <p><strong>CryptoZ</strong></p>
+                    </div>
+                    <div class="footer-final-div">
+                        <p>(C) designed by Sami4Code. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
