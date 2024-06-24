@@ -1,0 +1,1 @@
+This is a CryptoZ Project that taught me how to fetch data from ApI and integrate it to work in real time.
